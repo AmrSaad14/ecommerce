@@ -27,10 +27,15 @@ class AddProduct extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomTextField(hint: 'Product Name',onChanged: (value){_name = value;},),
+            SizedBox(height: 10,),
             CustomTextField(hint: 'Product Price',onChanged: (value){_price = value;}),
+            SizedBox(height: 10,),
             CustomTextField(hint: 'Product Description',onChanged: (value){_description = value;}),
+            SizedBox(height: 10,),
             CustomTextField(hint: 'Product Category',onChanged: (value){_category = value;}),
+            SizedBox(height: 10,),
             CustomTextField(hint: 'Product Image',onChanged: (value){_imageLocation = value;}),
+            SizedBox(height: 20,),
             ElevatedButton(onPressed: (){
               if ( _globalkey.currentState!.validate()){
                 _globalkey.currentState!.save();

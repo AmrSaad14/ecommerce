@@ -2,6 +2,8 @@ import 'package:ecommerce3/app_router.dart';
 import 'package:ecommerce3/firebase_options.dart';
 import 'package:ecommerce3/provider/admin_mode.dart';
 import 'package:ecommerce3/provider/model_hud.dart';
+import 'package:ecommerce3/screens/admin/add_product.dart';
+import 'package:ecommerce3/screens/admin/edit_product.dart';
 import 'package:ecommerce3/screens/user/login_Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-       onGenerateRoute: AppRouter.onGenerateRoute,
+        onGenerateRoute: AppRouter.onGenerateRoute,
         initialRoute: LoginScreen.routeName,
 
       ),

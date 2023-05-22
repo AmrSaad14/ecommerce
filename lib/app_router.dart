@@ -1,6 +1,8 @@
+import 'package:ecommerce3/models/product.dart';
 import 'package:ecommerce3/screens/admin/add_product.dart';
 import 'package:ecommerce3/screens/admin/admin_page.dart';
 import 'package:ecommerce3/screens/admin/edit_product.dart';
+import 'package:ecommerce3/screens/admin/manage_product.dart';
 import 'package:ecommerce3/screens/user/home_page.dart';
 import 'package:ecommerce3/screens/user/login_Screen.dart';
 import 'package:ecommerce3/screens/user/signup_screen.dart';
@@ -8,7 +10,8 @@ import 'package:flutter/material.dart';
 
 class AppRouter{
 static Route? onGenerateRoute ( RouteSettings settings){
-  print('The route is ${settings.name}');
+
+    print('The route is ${settings.name}');
   switch (settings.name){
     case '/' :
       return LoginScreen.route();
@@ -22,8 +25,10 @@ static Route? onGenerateRoute ( RouteSettings settings){
       return AdminPage.route();
     case AddProduct.routeName :
       return AddProduct.route();
-    case EditProduct.routeName :
-      return EditProduct.route();
+    case ManageProduct.routeName :
+      return ManageProduct.route();
+    case EditProductScreen.routeName :
+      return EditProductScreen.route();
 
     default : return _errorRoute();
   }
